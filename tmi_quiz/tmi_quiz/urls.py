@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.index),
     path('question/<int:question_id>', views.question, name="question"),
     path('login', views.login, name="nickname"),
+    path('comment', views.comment, name="comment"),
     path('tutorial', views.tutorial, name="tutorial"),
     path('scoring', views.scoring, name="scoring"),
     path('result', views.result, name="result"),

@@ -13,16 +13,19 @@
       <div class="logo">
         <img src="{% static "images/cat.png" %}" />
       </div>
-      <div class="order-container">
-        <p>닉네임 또는</p>
-        <p>이름을 입력하세요</p>
-      </div>
-      <div class="input-container">
-        <input />
-        <div class="basic-btn submit-btn">
-            <a href="{% url "tutorial" %}">결정!</a>
-        </div>
-      </div>
+      <form method="POST">
+        {% csrf_token %}
+          <div class="order-container">
+            <p>닉네임 또는</p>
+            <p>이름을 입력하세요</p>
+          </div>
+          <div class="input-container">
+            <input type="text" name="username" />
+            <div class="basic-btn submit-btn">
+                <button type="submit">결정!</button>
+            </div>
+          </div>
+      </form>
       <footer>
         <div>made by Jihoo.M</div>
       </footer>
@@ -38,14 +41,10 @@
         username = event.target.value;
     })
 
-    $submitbtn.addEventListener("click", (event) => {
-        if (!username) {
-            event.preventDefault();
-        }
-        else {
-            event.unbind();
-        }
-
-    })
+    // $submitbtn.addEventListener("click", (event) => {
+    //     if (!username) {
+    //         event.preventDefault();
+    //     }
+    // })
   </script>
 </html>

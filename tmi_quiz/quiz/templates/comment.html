@@ -22,10 +22,15 @@
             <p>Q4.</p>
             <p>하고 싶은 말은?</p>
         </div>
-        <div class="option-container">
-            <textarea></textarea>
-            <div class="basic-btn submit-btn"> <a href="{% url "scoring" %}">전송하기📩</a></div>
-        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="option-container">
+                <textarea type="text" name="comment"></textarea>
+                <div class="basic-btn submit-btn"> 
+                    <button type="submt">전송하기📩</button>
+                </div>
+            </div>
+        </form>
         <footer>
             <div>made by Jihoo.M</div>
         </footer>
