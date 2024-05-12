@@ -111,8 +111,8 @@ footer > div {
 
 footer > button {
     position: absolute;
-    left: 5%;
-    bottom: 25%;
+    right: 5%;
+    bottom: 33%;
     border-radius: 100%;
     background-color: #06CC9D;
     color: white;

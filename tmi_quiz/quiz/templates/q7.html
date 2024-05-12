@@ -41,8 +41,41 @@
             </div>
         </div>
         <footer>
+            <button>></button>
             <div>made by Jihoo.M</div>
         </footer>
     </div>
 </body>
+<script>
+    const $choices = document.querySelectorAll(".four-btn");
+    const $nextBtn = document.querySelector("footer > button");
+
+    let isChecked = [false,false,false,false];
+
+    for (let i=0; i<4; i++) {
+        $choices[i].addEventListener("click", (e) => {
+
+        // 체크박스 체크처리
+        isChecked[i] = !isChecked[i];
+       
+        // 체크박스 색깔표시
+        if (isChecked[i]) {
+            $choices[i].children[0].style.backgroundColor = 'yellow';
+        } else {
+            $choices[i].children[0].style.backgroundColor = 'white';
+        }
+        })
+    }
+
+    $nextBtn.addEventListener("click", (e) => {
+        isChecked.forEach((check, idx) => {
+            if (check) {
+                // 2점씩 추가
+                console.log("점수획득!")
+            }
+        })
+
+        location.href ="http://localhost:8000/question/8";
+    })
+</script>
 </html>

@@ -20,7 +20,7 @@
       </div>
       <div class="question-container">
         <p>Q6.</p>
-        <p>쌤이 어린시절 이동국 축구선수와 손을 잡고 입장했을 때, 대한민국이 상대했던 국가는?</p>
+        <p style="font-size: 1.6rem">쌤이 어린시절 이동국 축구선수와 손을 잡고 입장했을 때, 대한민국이 상대했던 국가는?</p>
       </div>
       <div class="option-container">
         <div class="four-btn">에콰도르</div>
@@ -33,4 +33,20 @@
       </footer>
     </div>
   </body>
+  <script>
+    const $choices = document.querySelectorAll(".four-btn");
+    for (let $choice of $choices) {
+      $choice.addEventListener("click", (e)=> {
+      
+        console.log(e.target.innerText);
+        if(e.target.innerText === "에콰도르") {
+          // 정답 처리 (점수 추가)
+          console.log("정답!")
+        }
+
+        location.href = "http://localhost:8000/question/7"
+
+      })
+    }
+</script>
 </html>

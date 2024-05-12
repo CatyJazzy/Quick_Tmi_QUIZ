@@ -35,12 +35,11 @@
     const $choices = document.querySelectorAll(".basic-btn");
     for (let $choice of $choices) {
       $choice.addEventListener("click", (e)=> {
-        //console.log(e.target);
-        console.log(e)
-        if(e.target.value === "항정살") {
+       
+        console.log(e.target.innerText);
+        if(e.target.innerText === "항정살") {
           // 정답 처리 (점수 추가)
           console.log("정답!")
-
         }
         location.href = "http://localhost:8000/question/2"
 

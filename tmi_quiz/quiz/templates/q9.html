@@ -35,4 +35,19 @@
       </footer>
     </div>
   </body>
+  <script>
+    const $choices = document.querySelectorAll(".image-option");
+    for (let $choice of $choices) {
+      $choice.addEventListener("click", (e)=> {
+       
+        console.log(e.target.innerText);
+        if(e.target.innerText === "엽떡") {
+          // 정답 처리 (점수 추가)
+          console.log("정답!")
+        }
+        location.href = "http://localhost:8000/question/10"
+
+      })
+    }
+</script>
 </html>

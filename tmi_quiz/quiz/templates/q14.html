@@ -33,4 +33,23 @@
       </footer>
     </div>
   </body>
+  <script>
+    const $choices = document.querySelectorAll(".four-btn");
+    for (let $choice of $choices) {
+      $choice.addEventListener("click", (e)=> {
+       
+        console.log(e.target.innerText);
+        if (e.target.innerText === "ENFJ") {
+          // 정답 처리 (점수 추가)
+          console.log("정답!");
+        }
+        if (e.target.innerText === "ENFP") {
+          // -6점
+          console.log("패널티!");
+        }
+        location.href = "http://localhost:8000/question/15"
+
+      })
+    }
+  </script>
 </html>

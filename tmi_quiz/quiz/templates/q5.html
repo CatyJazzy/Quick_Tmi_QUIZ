@@ -33,4 +33,26 @@
       </footer>
     </div>
   </body>
+  <script>
+    const $choices = document.querySelectorAll(".four-btn");
+    for (let $choice of $choices) {
+      $choice.addEventListener("click", (e)=> {
+       
+        console.log(e.target.innerText);
+        if(e.target.innerText === "퍽퍽살") {
+          // 정답 처리 (점수 추가)
+          console.log("정답!")
+        }
+
+        if(e.target.innerText === "닭다리") {
+          // 정답 처리 (점수 -4)
+          console.log("패널티!")
+
+        }
+
+        location.href = "http://localhost:8000/question/6"
+
+      })
+    }
+  </script>
 </html>
