@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> <link
+    rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo"><img src="{% static "images/cat.png" %}" /></div>
+      <div class="tutorial-container">
+        <p>안녕하세요, ${닉네임}님</p>
+        <p>앞으로 나올 문제들은<br />각각 배점이 다릅니다.</p>
+        <p>100점 만점입니다.</p>
+        <p>만점을 기대하겠습니다.</p>
+      </div>
+      <div class="great-icon">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/d49f1e82-91b0-45bf-b4c0-ca38c4816cf3/0PyUwgyBNh.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    setTimeout(()=>{
+        location.href = "http://localhost:8000/question/1"
+    }, 6000)
+  </script>
+</html>

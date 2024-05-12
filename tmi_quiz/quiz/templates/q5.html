@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="{% static "images/cat.png" %}" />
+      </div>
+      <div class="progress-bar">
+        <div class="total-bar">
+          <div class="complete-bar"></div>
+        </div>
+      </div>
+      <div class="question-container">
+        <p>Q5.</p>
+        <p>치킨을 먹을 때 가장 좋아하는 부위는?</p>
+      </div>
+      <div class="option-container">
+        <div class="four-btn">날개</div>
+        <div class="four-btn">닭다리</div>
+        <div class="four-btn">퍽퍽살</div>
+        <div class="four-btn">목</div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>

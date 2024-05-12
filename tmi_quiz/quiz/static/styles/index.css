@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bagel Fat One", system-ui;
+}
+
+.wrapper { 
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    background-color: #353535;
+    color: white;
+    position: relative;
+}
+
+body, button, input {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#quiz-title {
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+}
+
+#quiz-pic {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#quiz-pic > img {
+    width: 50%;
+    height: 40vh;
+}
+
+.basic-btn, .four-btn {
+    position: relative;
+    color: white;
+    font-size: 1.8rem;
+    width: 70%;
+    border-radius: 50px;
+    background-color: #06CC9D;
+    box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.basic-btn:hover, .four-btn:hover {
+    background-color: #028668;
+}
+ 
+.basic-btn {
+    height: 10vh;
+    line-height: 10vh;
+}
+
+.four-btn {
+    height: 8vh;
+    line-height: 8vh;
+    margin-top: 3vh;
+}
+
+.small {
+    font-size: 1.2rem;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.start-btn {
+    position: absolute;
+    top: 75vh;
+}
+
+.option-btn, .basic-btn {
+    margin-top: 5vh;
+}
+
+
+
+.btn-area  {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10vh;
+}
+
+footer > div {
+    position: absolute;
+    bottom: 8%;
+    right: 2%;
+    font-size: 0.6rem;
+}
+
+footer > button {
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    border-radius: 100%;
+    background-color: #06CC9D;
+    color: white;
+    font-size: 2rem;
+    width: 12%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+

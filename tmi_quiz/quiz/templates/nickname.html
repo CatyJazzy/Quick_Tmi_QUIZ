@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="{% static "images/cat.png" %}" />
+      </div>
+      <div class="order-container">
+        <p>닉네임 또는</p>
+        <p>이름을 입력하세요</p>
+      </div>
+      <div class="input-container">
+        <input />
+        <div class="basic-btn submit-btn">
+            <a href="{% url "tutorial" %}">결정!</a>
+        </div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    const $username = document.querySelector("input");
+    const $submitbtn = document.querySelector(".submit-btn");
+    let username = '';
+
+    $username.addEventListener("input", (event) => {
+        console.log(event.target.value);
+        username = event.target.value;
+    })
+
+    $submitbtn.addEventListener("click", (event) => {
+        if (!username) {
+            event.preventDefault();
+        }
+        else {
+            event.unbind();
+        }
+
+    })
+  </script>
+</html>

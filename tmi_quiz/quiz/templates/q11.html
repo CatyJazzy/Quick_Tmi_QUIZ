@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="{% static "images/cat.png" %}" />
+        </div>
+        <div class="progress-bar">
+            <div class="total-bar">
+                <div class="complete-bar"></div>
+            </div>
+        </div>
+        <div class="question-container">
+            <p>Q11.</p>
+            <p>쌤이 5월8일 수요일에 구경하지 못한 동아리를 모두 고르시오.</p>
+        </div>
+        <div class="option-container">
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                텃밭반
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                또래상담
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                땡스히어로
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                축구반
+            </div>
+        </div>
+        <footer>
+            <div>made by Jihoo.M</div>
+        </footer>
+    </div>
+</body>
+</html>

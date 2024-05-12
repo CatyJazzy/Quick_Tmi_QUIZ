@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="{% static "images/cat.png" %}" />
+      </div>
+      <div class="nickname-container">
+        <div class="nickname-description">
+          <p>${닉네임}님의</p>
+          <p>점수는 아래와 같습니다.</p>
+        </div>
+      </div>
+      <div class="score-container">
+        <div class="score-box">
+          <span>98</span>
+          <span>점</span>
+        </div>
+        <div class="description-box">
+          배움누리실은 3층에 있습니다.
+          <br />
+          점수를 자랑하고 치킨에 도전하세요
+        </div>
+        <div class="share-box">
+          <img src={% static "images/kakao_icon.png" %} />
+          <img src={% static "images/url_icon.png" %} />
+        </div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>

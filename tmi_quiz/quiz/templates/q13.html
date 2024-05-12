@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="{% static "images/cat.png" %}" />
+        </div>
+        <div class="progress-bar">
+            <div class="total-bar">
+                <div class="complete-bar"></div>
+            </div>
+        </div>
+        <div class="question-container">
+            <p>Q13.</p>
+            <p>쌤의 취미를 모두 고르시오.</p>
+        </div>
+        <div class="option-container">
+            <div class="four-btn small">
+                <div class="checkbox"></div>
+                저녁에 허리띠 차고 웨이트 하기
+            </div>
+            <div class="four-btn small">
+                <div class="checkbox"></div>
+                요리 후 예쁘게 플레이팅해서 먹기
+            </div>
+            <div class="four-btn small">
+                <div class="checkbox"></div>
+                공유 자전거 타고 카페공부 가기
+            </div>
+            <div class="four-btn small">
+                <div class="checkbox"></div>
+                청계천 조깅하며 오리 구경하기
+            </div>
+        </div>
+        <footer>
+            <div>made by Jihoo.M</div>
+        </footer>
+    </div>
+</body>
+</html>

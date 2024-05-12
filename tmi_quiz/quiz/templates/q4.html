@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="{% static "images/cat.png" %}" />
+        </div>
+        <div class="progress-bar">
+            <div class="total-bar">
+                <div class="complete-bar"></div>
+            </div>
+        </div>
+        <div class="question-container">
+            <p>Q4.</p>
+            <p>쌤이 창업에 도전했던 분야는?</p>
+        </div>
+        <div class="option-container">
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                요식업
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                에듀테크
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                숙박업
+            </div>
+            <div class="four-btn">
+                <div class="checkbox"></div>
+                금융업
+            </div>
+        </div>
+        <footer>
+            <div>made by Jihoo.M</div>
+        </footer>
+    </div>
+</body>
+</html>

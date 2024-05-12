@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="{% static "images/cat.png" %}" />
+      </div>
+      <div class="progress-bar">
+        <div class="total-bar">
+          <div class="complete-bar"></div>
+        </div>
+      </div>
+      <div class="question-container">
+        <p>Q6.</p>
+        <p>쌤이 어린시절 이동국 축구선수와 손을 잡고 입장했을 때, 대한민국이 상대했던 국가는?</p>
+      </div>
+      <div class="option-container">
+        <div class="four-btn">에콰도르</div>
+        <div class="four-btn">스페인</div>
+        <div class="four-btn">콜롬비아</div>
+        <div class="four-btn">멕시코</div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>

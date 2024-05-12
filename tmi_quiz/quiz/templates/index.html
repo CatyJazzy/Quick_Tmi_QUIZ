@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} />
+    <title>🎓</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="quiz-title">
+        <p>TMI QUIZ</p>
+        <p>about 1-8 교생쌤</p>
+      </div>
+      <div id="quiz-pic"><img src="{% static "images/cat.png" %}" /></div>
+      <div class="btn-area">
+        <button class="basic-btn start-btn">
+            <a href="{% url "nickname" %}">퀴즈 시작하기</a>
+        </button>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> 
+    <link rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="{% static "images/cat.png" %}" />
+      </div>
+      <div class="progress-bar">
+        <div class="total-bar">
+          <div class="complete-bar"></div>
+        </div>
+      </div>
+      <div class="question-container">
+        <p>Q10.</p>
+        <p>쌤이 가장 좋아하는 파스타는?</p>
+      </div>
+      <div class="option-container">
+        <div class="four-btn">토마토 파스타</div>
+        <div class="four-btn">까르보나라</div>
+        <div class="four-btn">알리오 올리오</div>
+        <div class="four-btn">봉골레</div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>

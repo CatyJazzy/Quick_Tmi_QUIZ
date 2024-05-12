@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "styles/index.css" %} /> <link
+    rel="stylesheet" href={% static "styles/type1.css" %} />
+    <title>😻</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo"><img src="{% static "images/cat.png" %}" /></div>
+      <div class="progress-bar">
+        <div class="total-bar">
+          <div class="complete-bar"></div>
+        </div>
+      </div>
+      <div class="question-container">
+        <p>Q9.</p>
+        <p>쌤의 최애 야식은?</p>
+      </div>
+      <div class="image-option-container">
+        <div class="image-option">
+          <div id="image-3"></div>
+          <div>불족발</div>
+        </div>
+        <div class="image-option">
+          <div id="image-4"></div>
+          <div>엽떡</div>
+        </div>
+      </div>
+      <footer>
+        <div>made by Jihoo.M</div>
+      </footer>
+    </div>
+  </body>
+</html>
