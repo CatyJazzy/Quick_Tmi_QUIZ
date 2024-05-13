@@ -49,6 +49,8 @@
 <script>
     const $choices = document.querySelectorAll(".four-btn");
     const $nextBtn = document.querySelector("footer > button");
+    let prevScore = JSON.parse(window.localStorage.getItem("{{ user.username }}"));
+    let score = 0;
 
     let isChecked = [false,false,false,false];
 
@@ -70,9 +72,19 @@
     $nextBtn.addEventListener("click", (e) => {
         isChecked.forEach((check, idx) => {
             if (check && (idx === 1  || idx === 2)) {
-                // 6점 추가
+                score += 6;
             }
         })
+
+        const newScore = [...prevScore, score];
+        console.log(newScore);
+
+        window.localStorage.setItem("{{ user.username }}", JSON.stringify(newScore));
+        // fetch('/answer', {
+        // method: 'POST', 
+        // body: JSON.stringify({score: newScore})
+        // })
+        // .then(response => response.json())
 
         location.href ="http://localhost:8000/question/5";
     })

@@ -32,6 +32,10 @@
     </div>
   </body>
   <script>
+
+    window.localStorage.setItem("{{ user.username }}", []);
+
+    let score = 0;
     const $choices = document.querySelectorAll(".basic-btn");
     for (let $choice of $choices) {
       $choice.addEventListener("click", (e)=> {
@@ -39,11 +43,22 @@
         console.log(e.target.innerText);
         if(e.target.innerText === "항정살") {
           // 정답 처리 (점수 추가)
+          score += 5;
           console.log("정답!")
         }
-        location.href = "http://localhost:8000/question/2"
 
+
+        window.localStorage.setItem("{{ user.username }}", JSON.stringify([score]));
+        fetch('/answer', {
+        method: 'POST', 
+        body: JSON.stringify({score: `${score}`})
+        })
+        .then(response => response.json())
+
+        location.href = "http://localhost:8000/question/2"
       })
     }
+
+  
   </script>
 </html>

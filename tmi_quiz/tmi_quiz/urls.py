@@ -26,4 +26,5 @@ urlpatterns = [
     path('tutorial', views.tutorial, name="tutorial"),
     path('scoring', views.scoring, name="scoring"),
     path('result', views.result, name="result"),
+    path('answer', views.answer, name="answer"),
 ]

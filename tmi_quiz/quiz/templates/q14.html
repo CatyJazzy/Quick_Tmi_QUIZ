@@ -35,18 +35,32 @@
   </body>
   <script>
     const $choices = document.querySelectorAll(".four-btn");
+    let prevScore = JSON.parse(window.localStorage.getItem("{{ user.username }}"));
+    let score = 0;
     for (let $choice of $choices) {
       $choice.addEventListener("click", (e)=> {
        
         console.log(e.target.innerText);
         if (e.target.innerText === "ENFJ") {
           // 정답 처리 (점수 추가)
+          score += 8;
           console.log("정답!");
         }
         if (e.target.innerText === "ENFP") {
           // -6점
+          score -= 6;
           console.log("패널티!");
         }
+
+        const newScore = [...prevScore, score];
+        console.log(newScore);
+
+        window.localStorage.setItem("{{ user.username }}", JSON.stringify(newScore));
+        // fetch('/answer', {
+        // method: 'POST', 
+        // body: JSON.stringify({score: newScore})
+        // })
+        // .then(response => response.json())
         location.href = `{% url "comment" %}`;
 
       })

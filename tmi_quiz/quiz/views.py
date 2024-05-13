@@ -3,13 +3,19 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from .models import Person
+from django.views.decorators.csrf import csrf_exempt
+
+from urllib import response
+from django.http import HttpResponse
+import json
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
 def question(request, question_id):
-    return render(request, 'q{0}.html'.format(question_id))
+    ongoing = Person.objects.get(name = request.user)
+    return render(request, 'q{0}.html'.format(question_id), {'ongoing': ongoing})
 
 def comment(request):
     if request.method == 'POST':
@@ -52,3 +58,13 @@ def scoring(request):
 def result(request):
     return render(request, 'result.html')
 
+@csrf_exempt
+def answer(request):
+    request_body = json.loads(request.body)
+    
+
+    print(request_body['score'],'******')
+    ongoing_user = Person.objects.filter(name = request.user).update(
+            answers = request_body['score']
+        )
+    return HttpResponse({'signal': 'great'})
