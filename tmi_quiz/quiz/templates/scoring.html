@@ -37,6 +37,18 @@
     </div>
   </body>
   <script>
+    const finalScore = [...JSON.parse(window.localStorage.getItem("{{ user.username }}"))];
+    let newScore = 0;
+    finalScore.forEach((score) => {
+        newScore += score;
+    })
+
+    fetch('/answer', {
+        method: 'POST', 
+        body: JSON.stringify({score: newScore})
+        })
+        .then(response => response.json())
+
     setTimeout(()=>{
         location.href = "http://localhost:8000/result"
     }, 6000)

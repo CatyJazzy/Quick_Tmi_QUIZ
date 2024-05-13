@@ -13,7 +13,7 @@
       <div class="logo"><img src="{% static "images/cat.png" %}" /></div>
       <div class="progress-bar">
         <div class="total-bar">
-          <div class="complete-bar"></div>
+          <div class="complete-bar" style="width: 64.28%"></div>
         </div>
       </div>
       <div class="question-container">
@@ -43,7 +43,7 @@
       $choice.addEventListener("click", (e)=> {
        
         console.log(e.target.innerText);
-        if(e.target.innerText === "엽떡") {
+        if(e.target.innerText.includes("엽떡") || e.target.id.includes(4)) {
           // 정답 처리 (점수 추가)
           score += 8;
           console.log("정답!")

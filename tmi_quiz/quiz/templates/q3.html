@@ -15,7 +15,7 @@
         </div>
         <div class="progress-bar">
             <div class="total-bar">
-                <div class="complete-bar"></div>
+                <div class="complete-bar" style="width: 21.42%"></div>
             </div>
         </div>
         <div class="question-container">
@@ -43,15 +43,13 @@
     let score=0;
     for (let $choice of $choices) {
       $choice.addEventListener("click", (e)=> {
-       
-        console.log(e.target.innerText);
-        if(e.target.innerText === "스파이크") {
+
+        if(e.target.innerText.includes("스파이크") || e.target.id.includes(2)) {
           // 정답 처리 (점수 추가)
           score += 4;
           console.log("정답!");
         }
         const newScore = [...prevScore, score];
-        console.log(newScore);
 
         window.localStorage.setItem("{{ user.username }}", JSON.stringify(newScore));
 
@@ -61,7 +59,7 @@
         // body: JSON.stringify({score: newScore})
         // })
         // .then(response => response.json())
-        location.href = "http://localhost:8000/question/4"
+        location.href = "http://localhost:8000/question/4";
 
       })
     }

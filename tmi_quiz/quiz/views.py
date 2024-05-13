@@ -27,7 +27,13 @@ def comment(request):
 
     return render(request, 'comment.html')
 
+
 def login(request):
+    found_user = User.objects.filter(username = request.POST.get('username'))
+
+    if len(found_user) > 0 :
+            error = '이미 존재하는 닉네임입니다.'
+            return render(request, 'nickname.html', {'error':error})
 
     ## 유저 회원가입 후 로그인 처리
     if request.method == 'POST':
@@ -56,15 +62,18 @@ def scoring(request):
     return render(request, 'scoring.html')
 
 def result(request):
-    return render(request, 'result.html')
+    ongoing_user = Person.objects.get(name = request.user)
+    print(ongoing_user)
+    return render(request, 'result.html', {"score": ongoing_user.score})
 
 @csrf_exempt
 def answer(request):
     request_body = json.loads(request.body)
     
+    
 
     print(request_body['score'],'******')
     ongoing_user = Person.objects.filter(name = request.user).update(
-            answers = request_body['score']
+            score = request_body['score']
         )
     return HttpResponse({'signal': 'great'})
